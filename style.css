@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+}
+.header .navbar {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row-reverse; /* عكس الاتجاهات */
+    align-items: center;
+    justify-content: space-between;
+    background: #f2e000;
+}
+
+.header .navbar .logo {
+    margin-left: 20px; /* المسافة بين اللوغو والعنوان بعد عكس الاتجاهات */
+}
+
+.header .navbar .title {
+    font-size: 3rem; /* حجم النص، يمكنك تعديله حسب الحاجة */
+    color: rgb(82, 33, 96); /* لون النص، يمكنك تعديله حسب الحاجة */
+    margin-left: 20px; /* المسافة بين العنوان واللوغو */
+}
+
+.header .navbar .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header .navbar .menu li {
+    margin-right: 70px; /* المسافة بين الروابط بعد عكس الاتجاهات */
+}
+
+.header .navbar .menu li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0.3rem; /* تعديل المسافة حول النص */
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: rgb(82, 33, 96);
+    transition: color 0.3s ease;
+}
+
+.header .navbar .menu li a:hover {
+    color: rgb(248, 248, 246);
+    font-size: 1.2rem; /* تكبير حجم النص عند التمرير */
+}
+/* جعل الشريط الرئيسي ثابتًا عند النزول */
+.header .navbar {
+    position: fixed; /* تغيير position إلى fixed */
+    top: 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+    background:#f2e000; /* الحفاظ على اللون الأصفر الأساسي */
+}
+.logo{
+
+    clip-path: circle(50%);
+}
+/* التأكد من أن محتوى الصفحة لا يبدأ تحت الشريط الرئيسي */
+body {
+    padding-top: 106px; /*إزاحة المحتوى لأسفل ليكون مرئيًا بالكامل*/
+}
+/* تنسيق العنوان h1 */
+h1 {
+    text-align: center; /* محاذاة النص في الوسط */
+    color: #522160; /* اللون الأساسي (البنفسجي) */
+    font-size: 48px; /* حجم الخط */
+    font-weight: bold; /* جعل النص عريض */
+    background:#f2e000; 
+}
+/* تنسيق العنصر الرئيسي */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* تنسيق منطقة الصور */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* تنسيق الصور */
+.carousel-container {
+    overflow: hidden; /* إخفاء الصور التي تكون خارج العنصر الحاوي */
+    width: 100%; /* يمكنك تعديل هذا العرض حسب الحاجة */
+    max-width: 1000px; /* يمكنك تعديل هذا العرض حسب الحاجة */
+    position: relative; /* لجعل الأزرار تظهر فوق الصور */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease; /* إضافة تأثير الانتقال */
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 500px; /* يمكنك تعديل هذا الارتفاع حسب الحاجة */
+    flex-shrink: 0; /* لمنع الصور من الانكماش */
+}
+
+/* تنسيق أزرار التنقل */
+.carousel-button {
+    background-color: rgb(82 33 96);
+    color: rgb(242 224 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.carousel-button:hover{
+    background-color: rgb(242 224 0);
+    color: rgb(82 33 96);
+}
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+ /* تنسيق قسم النبذة */
+#about {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.about-container h2 {
+    color: #522160;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-container p.about-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-container h3 {
+    color: #522160;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.goals-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.goals-list li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.goals-list li:before {
+    content: "✔";
+    color: #f2e000;
+    position: absolute;
+    right: 170px;
+    top: 0;
+}
+/* تأثير الظهور عند التمرير */
+#about {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#about.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تنسيقات الفوتر */
+footer {
+    background-color:#9c9b9c31;
+    color: #020202;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    direction: rtl; /* تغيير اتجاه النص إلى اليمين إلى اليسار */
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+  }
+  
+  .footer-container h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color:#522160 ;
+  }
+  
+  .footer-container p {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
+  #n{
+    margin: 10px;
+  }
+  #n:hover{
+    color: #f2e000;
+  }
+
+.circle {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    margin: 10px;
+}
+
+.circle img{
+    width: 30px;
+    height: 30px;
+
+}
+.circle:hover{
+    background-color:#f2e000;
+}
+
